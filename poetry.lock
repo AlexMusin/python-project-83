@@ -45,6 +45,23 @@ async = ["asgiref (>=3.2)"]
 dotenv = ["python-dotenv"]
 
 [[package]]
+name = "gunicorn"
+version = "21.2.0"
+description = "WSGI HTTP Server for UNIX"
+category = "main"
+optional = false
+python-versions = ">=3.5"
+
+[package.dependencies]
+packaging = "*"
+
+[package.extras]
+eventlet = ["eventlet (>=0.24.1)"]
+gevent = ["gevent (>=1.4.0)"]
+setproctitle = ["setproctitle"]
+tornado = ["tornado (>=0.2)"]
+
+[[package]]
 name = "itsdangerous"
 version = "2.1.2"
 description = "Safely pass data to untrusted environments and back."
@@ -75,6 +92,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "packaging"
+version = "23.1"
+description = "Core utilities for Python packages"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[[package]]
 name = "werkzeug"
 version = "2.3.7"
 description = "The comprehensive WSGI web application library."
@@ -91,14 +116,16 @@ watchdog = ["watchdog (>=2.3)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "a0eb3a46f0617b01521f7efa7557ee99eaafbd19a3959493cf500935aeec2cca"
+content-hash = "c9a91338b62c49781e8f4a10825f4676b789ce5c4cbd9c1fd40a705158d1daf9"
 
 [metadata.files]
 blinker = []
 click = []
 colorama = []
 flask = []
+gunicorn = []
 itsdangerous = []
 jinja2 = []
 markupsafe = []
+packaging = []
 werkzeug = []
