@@ -1,5 +1,8 @@
 from flask import Flask
+from dotenv import load_dotenv
 
+load_dotenv()
+__all__ = ['app']
 app = Flask(__name__)
 
 
