@@ -1,4 +1,6 @@
 import pytest
+import json
+import os
 import page_analyzer.app as app
 
 
@@ -8,7 +10,10 @@ def test_start_page_response():
 
 def test_start_page_body():
     response = app.test_client().get('/')
-    assert "Анализатор страниц" in response.text
+    path = os.getcwd()
+    with open(path + '/tests/fixtures/text_check.json', 'r') as fp:
+        elems = json.load(fp)
+        assert all(map(lambda x: x in response.text, [elem for elem in elems]))
 
 
 
